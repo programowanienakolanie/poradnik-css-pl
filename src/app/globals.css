@@ -2,26 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.back-to-top {
+  @apply fixed right-12 bottom-16 p-0 bg-white text-transparent border-none cursor-pointer text-sm outline-none z-50 transition-all duration-300;
+  border-radius: 50px;
+  height: 0px;
+  width: 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.back-to-top.show {
+  @apply bg-white text-green-500 text-lg right-6 bottom-12 h-12 w-12 shadow-md;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.back-to-top.show:active {
+  @apply shadow-lg;
+}
+
+.back-to-top::before,
+.back-to-top::after {
+  content: '';
+  display: block;
+  vertical-align: middle;
+  border-bottom: solid 10px #000000;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+  height: 0;
+  margin: 18px auto 0;
+  width: 0;
+  border-radius: 20px;
+  visibility: hidden;
+}
+
+.back-to-top.show::after,
+.back-to-top.show::before {
+  visibility: visible;
+}
+
+.back-to-top.show::after {
+  border-bottom-color: #fff;
+  position: relative;
+  top: -24px;
+}
+
+.inline-block:hover {
+  cursor: pointer; /* This changes the cursor to a pointer */
+  /* Other hover effects */
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
 }

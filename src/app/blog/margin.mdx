@@ -1,0 +1,62 @@
+# <span id='margin'>Margin</span>
+
+## Wprowadzenie
+
+Właściwość `margin` w CSS jest używana do tworzenia odstępów wokół elementów, kontrolując przestrzeń zewnętrzną pomiędzy elementem a jego sąsiadami. Jest to istotny aspekt układu strony, pozwalający na oddzielenie elementów od siebie i uzyskanie pożądanej przestrzeni wizualnej.
+
+## Podstawowe użycie właściwości "margin"
+
+Właściwość `margin` może być stosowana do dowolnego elementu HTML, aby określić odstęp wokół niego. Można określić marginesy dla każdego z czterech boków elementu (góra, prawy, dół, lewy) osobno lub wszystkie naraz. Oto przykład:
+
+```css
+p {
+  margin: 10px;
+}
+```
+
+W powyższym przykładzie wszystkim akapitom (`<p>`) zostanie nadany margines o szerokości 10 pikseli ze wszystkich stron.
+
+### Składniki właściwości "margin"
+
+Właściwość `margin` może przyjmować od jednego do czterech wartości:
+
+- **Jedna wartość**: Ustawia margines dla wszystkich czterech boków.
+- **Dwie wartości**: Pierwsza dla góry i dołu, druga dla prawej i lewej strony.
+- **Trzy wartości**: Pierwsza dla góry, druga dla prawej i lewej strony, trzecia dla dołu.
+- **Cztery wartości**: Odpowiadają kolejno górze, prawej stronie, dołowi, lewej stronie.
+
+### Przykłady użycia
+
+1. **Jedna wartość:**
+
+   ```css
+   .klasaElementu {
+     margin: 5px;
+   }
+   ```
+
+2. **Dwie wartości:**
+
+   ```css
+   .klasaElementu {
+     margin: 10px 15px;
+   }
+   ```
+
+3. **Cztery wartości:**
+
+   ```css
+   .klasaElementu {
+     margin: 5px 10px 15px 20px;
+   }
+   ```
+
+### Dobre praktyki
+
+- Używaj marginesów, aby zapewnić wystarczający odstęp między elementami, zwiększając czytelność i estetykę strony.
+- Unikaj nadmiernego stosowania dużych marginesów, które mogą spowodować niepotrzebne przewijanie strony.
+- W przypadku responsywnych stron internetowych, rozważ użycie jednostek względnych (np. `%` lub `em`) dla marginesów, aby zapewnić lepszą kompatybilność na różnych urządzeniach.
+
+## Podsumowanie
+
+Właściwość `margin` w CSS jest kluczowa dla efektywnego zarządzania przestrzenią na stronie, umożliwiając tworzenie przejrzystych i dobrze zorganizowanych układów.
